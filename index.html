@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>landing page</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+   <header>
+    <a href="#" class="brand">Travel</a>
+    <div class="menu-btn"></div>   
+    <div class="navigation">
+        <div class="navigation-items">
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Explore</a>
+<a href="#">Gallery</a>
+<a href="#">Contact</a>
+        </div>
+    </div>
+   </header>
+
+   <section class="home">
+<video class="video-slide active" src="video (2160p)1.mp4" autoplay muted loop></video> 
+<video class="video-slide" src="video (1080p)2.mp4" autoplay muted loop></video> 
+<video class="video-slide" src="pexels_videos_2099568 (1080p) (3).mp4" autoplay muted loop></video> 
+<video class="video-slide" src="video (2160p) (4).mp4" autoplay muted loop></video> 
+<video class="video-slide" src="video (1080p) (5).mp4" autoplay muted loop></video> 
+    <div class="content active">
+        <h1>Wonderful.<br><span>Island</span></h1>
+<p>“ Small islands of coherence in a sea of chaos can shift the whole system to a higher order.” 
+    In a sense, each of us is an island. In another sense, however, we are all one. For though islands appear separate, and may even be situated at great distances from one another, they are only extrusions of the same planet, Earth.
+</p>
+<a href="#">Read More</a>
+    </div>
+    <div class="content">
+        <h1>Camping.<br><span>Enjoy</span></h1>
+<p>Camping is an inspiring way to escape into the lap of nature and get an ideal escape from the hectic and boring day-to-day life. It may not be your cup of tea. However, trust me; there is no better feeling in this world than gazing at the stars at night or having fun with friends at the campfire.
+</p>
+<a href="#">Read More</a>
+    </div>
+    <div class="content">
+        <h1>Adventures.<br><span>Off Road</span></h1>
+<p>Adventure can be the feeling of going outdoors and engaging in a new activity. Children may associate the thrill of going out with Adventure.There can be various example of Adventure. Going outdoors on a regular hiking trip can be an adventure. It can be adventurous for some to be present amidst a new crowd of people.</p>
+<a href="#">Read More</a>
+    </div>
+    <div class="content">
+        <h1>Road Trip.<br><span>Together</span></h1>
+<p>Road trips are the equivalent of human wings. Ask we to go on one, anywhere.we'll stop in every small town and learn the history and stories,fell the ground, and capture thr spirit.Then we'll turn it into our own story that will live inside our history to carry with us, always.Because stories are more important than things.
+</p>
+<a href="#">Read More</a>
+    </div>
+    <div class="content">
+        <h1>Feel Nature.<br><span>Relax</span></h1>
+<p>It is not so much for its beauty that the forest makes a claim upon men's hearts, as for that subtle something, that quality of air that emanation from old trees, that so wonderfully changes and renews a weary spirit.
+</p>
+<a href="#">Read More</a>
+    </div>
+<div class="media-icons">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+</div>
+<div class="slider-navigation">
+<div class="nav-btn active"></div>
+<div class="nav-btn"></div>
+<div class="nav-btn"></div>
+<div class="nav-btn"></div> 
+<div class="nav-btn"></div>
+
+</div>
+   </section>
+   <script type="text/javascript">
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+     
+    menuBtn.addEventListener("click", () =>{
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+    });
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+        btns.forEach((btn) => {
+            btn.classList.remove("active");
+        });
+
+        slides.forEach((slide) => {
+            slide.classList.remove("active");
+        });
+
+        contents .forEach((content) => {
+            content.classList.remove("active");
+        });
+
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+        contents[manual].classList.add("active");
+    }
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+     sliderNav(i);
+            });
+        });
+   </script>
+</body>
+</html>
